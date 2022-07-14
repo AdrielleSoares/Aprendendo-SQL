@@ -1,0 +1,89 @@
+A linguagem SQL foi desenvolvida no começo dos anos 70, na cidade de São José, Califórnia, em um projeto chamado System R da IBM, do inglês International Business Machines, cujo objetivo era comprovar a viabilidade da implementação de um modelo relacional, que um estudioso chamado Codd estava propondo.
+
+Esse estudioso elaborou uma forma estruturada de realizar consultas nos bancos de dados que estavam surgindo, chamados “bancos de dados relacionais”.
+
+Naquela época, os bancos de dados ainda não possuíam relacionamento entre as tabelas nas quais os dados eram armazenados. Era a categoria de banco de dados mais antigo, a sequencial, que efetuava a consulta dos registros de maneira sequencial, ou seja, um após o outro.
+
+Com o surgimento dos bancos de dados relacionais (ou DBMS, do inglês, Data Base Management System, “Sistema de Gerenciamento de Banco de Dados"), Codd considerou criar uma linguagem que facilitasse a extração e manipulação de dados, além da manipulação das estruturas desse banco aproveitando a característica de relacionamento entre eles.
+
+Porém, não era apenas a IBM que estava trabalhando com os novos bancos de dados relacionais. Por volta dos anos 80, a Oracle, dentre outras empresas, também estava buscando maneiras mais fáceis de manipular essas novas estruturas.
+
+Mais para o final dos anos 80 e início dos 90, o órgão americano, o ANSI (da sigla American National Standard Institute), estabeleceu alguns padrões para as consultas dos bancos de dados relacionais.
+
+Então, foi criada a linguagem SQL, do inglês Structured English Query Language, que traduzindo seria algo como “linguagem de consulta estruturada em inglês”. No inglês, geralmente, é pronunciado SEQUEL e não SQL, soletrando as letras - diferentemente do português, em que normalmente lemos como “ésse quê éle”.
+
+O principal objetivo da linguagem SQL é padronizar a maneira como os registros são consultados nos bancos de dados relacionais. Atualmente, os bancos relacionais aderem ao padrão SQL, que vai além das consultas: é usado também, na criação, alteração, estruturação e manipulação do banco de dados, além da maneira como banco de dados interage com a segurança, entre outros usos.
+
+Entre as vantagens do banco de dados relacional, a primeira é que essa padronização utilizando a linguagem SQL tem um custo reduzido do aprendizado. Por exemplo, o profissional com conhecimento sobre o SQL da Oracle conseguirá manipular facilmente o MySQL ou SQL Server da Microsoft. Por mais que existam diferenças - principalmente na parte de funções -, a adaptação do profissional não é uma questão complicada.
+
+Outra vantagem, é a portabilidade. Por exemplo, é mais simples migrar sistemas que usam Oracle para SQL Server ou para MySQL, ou vice-versa. Lembrando que quanto mais for utilizado o SQL Standard definido pelo ANSI, mais fácil será essa portabilidade no futuro. Então, é útil evitar as funções específicas do banco de dados e permitir que o programa realize essa tarefa.
+
+Já a longevidade é a garantia de que os seus relatórios ou processos utilizando o SQL irão funcionar por um longo período, já que estarão sempre adaptados ao padrão ANSI. Ou seja, ao efetuar um upgrade de banco de dados o seu sistema não ficará fora de serviço.
+
+Outro benefício é a comunicação. O fato da maioria utilizar SQL permite a facilidade de comunicação entre os sistemas. Como, por exemplo, processos de ETL, (extract, transform and load), ou de integração entre sistemas que ficam mais simples de serem desenvolvidos, já que ambos utilizam o SQL padrão.
+
+Por último temos a liberdade de escolha. Por existir um padrão de linguagem, se a empresa for optar pelo uso de um banco de dados relacional não ficará presa à linguagem de comunicação, por exemplo, já que são bem semelhantes. Ao tomar essa decisão, a corporação irá utilizar outros critérios de escolha, como performance, hardware, custo, entre outros.
+
+Contudo, essa padronização não possui apenas vantagens, há algumas desvantagens - ainda que poucas. A primeira é a privação da criatividade. O SQL possui limitações que podem não atender às novas demandas no mercado na linguagem SQL, principalmente com o surgimento das redes sociais e dos enormes volumes de dados, o chamado big data. Ou seja, há uma carência nas coletas de dados que estão trafegando na internet.
+
+Para tal, estão surgindo outros bancos que usam padrões diferentes dos bancos de dados relacionais, o chamado NoSQL. Estes atendem de forma mais eficiente as demandas de tabelas de big data , como no caso das redes sociais. Lembrando que estamos nos referindo a estruturas que escapam do padrão ANSI e que, por isso, exigem um aprendizado mais específico.
+
+Outro ponto é a escassez de estruturação da linguagem SQL, já que ela não possui if, for e when, isto é, comandos condicionais como as demais linguagens de programação.
+
+Para conseguir suprir essa carência da estruturação, os bancos de dados relacionais da Oracle, SQL e MySQL criaram suas linguagens próprias internas que realizam esse conjunto de estruturação usando a linguagem SQL, mas que acaba se afastando um pouco do padrão ANSI.
+
+Falando um pouco sobre o padrão ANSI, este possui três grupos de comandos. O primeiro, é o DDLs, ou Data Definition Language (linguagem de definição de dados). Os DDLs são a parte da linguagem SQL que permite a manipulação das estruturas do banco de dados. Como, por exemplo, criar um banco, tabelas, índices, apagar as tabelas e alterar a política de crescimento de índice. Ou seja, os comandos que envolvem a estrutura do banco de dados relacionais são os comandos do tipo DDL.
+
+O segundo grupo de comandos são os chamados DML, ou Data Manipulation Language (linguagem de manipulação de dados). Esse grupo visa gerenciar os dados: incluindo, alterando e excluindo informações nas estruturas do banco, como as tabelas. Além disso, realizam as consultas, buscam as informações das estruturas e exibirems para o usuário.
+
+Finalmente, chegamos nos comandos DCL, ou Data Control Language ("linguagem de controle de dados"). Este grupo nos permite administrar o banco de dados como, por exemplo, o controle de acesso, o gerenciamento do usuário, gerenciar o que cada usuário(a) pode ou não visualizar, gerenciar o banco ao nível de estrutura (como a política de crescimento, como e onde será armazenado no disco), administrar os processos, saber quantos processos estão sendo executados, controle de log e assim por diante.
+
+
+----- >>>> MySQL <<<<<-----
+Agora, iremos entender sobre a história do MySQL e mencionar algumas de suas características.
+
+Já conversamos um pouco sobre a história do SQL, quando os bancos relacionais estavam começando a ser popularizados. À época, três desenvolvedores, o David Axmark, Allan Larsson e Michael Widenius, buscaram elaborar uma interface SQL que fosse compatível com o que estava surgindo no mercado de banco de dados.
+
+No início, eles utilizaram APIs de terceiros para efetuar os comandos SQL que buscavam informações de alguns outros bancos de dados de mercado. Porém, não obtiveram um retorno satisfatório e, por esse motivo, começaram a desenvolver sua própria API de consulta - e não apenas isso, também o seu próprio banco de dados, utilizando a linguagem C++.
+
+Foi a partir disso que se iniciou o projeto MySQL. Ele se tornou bastante popular, primeiramente por ser apresentado como um software livre (open source), isto é, a comunidade teria acesso ao código-fonte para realizar alterações e contribuir com melhorias para o banco de dados. Além disso, se mostrou um banco de dados bastante ágil para a época, mais rápido que os concorrentes, além de apresentar um excelente mecanismo de multitarefas e de multiusuário.
+
+Com isso, o MySQL mostrou que o seu servidor poderia ser usado e suportava bem a escalabilidade robusta em missão crítica, como, por exemplo, em um banco que nunca pode parar a operação dos serviços prestados.
+
+Missão crítica: todo sistema tecnológico fundamental para que os serviços de uma empresa continuem operando sem interrupções.
+
+Como consequência, o MySQL se popularizou como software livre, inclusive de modo corporativo. No ano de 2008, o MySQL AB, empresa que gerenciava o código desse banco de dados, foi comprada por um bilhão de dólares por uma empresa chamada Sun Microsystems, uma empresa grande que a princípio atuava na área de hardware e depois começou a entrar para o ramo de software. Essa companhia também era responsável pela criação do Java.
+
+Em 2009, após um ano da compra do MySQL, a Sun Microsystems foi comprada pela Oracle, que passou a ter propriedade sobre todos os produtos. Por esse motivo, a Oracle é hoje dona do Java e do MySQL. Houve uma grande movimentação no mercado naquele tempo, já que a Oracle possuía o seu banco de dados relacional robusto e o MySQL estava se mostrando um concorrente à altura.
+
+Quando o MySQL foi vendido, a comunidade open source criou outro banco de dados, o MariaDB, que se tornou o sucessor em código aberto do MySQL.
+
+Devido à sua popularidade, sendo uma opção de baixo custo para as empresas do mercado corporativo e de mercado online (que vinha crescendo bastante a partir dos 2009 e 2010), a Oracle manteve o desenvolvimento do MySQL.
+
+A Oracle permitiu que os usuários pudessem escolher entre usar o programa como produto open source, sob os termos da licença GNU (GNU's Not Unix!) ou comprar a licença padrão comercial do MySQL. Para esse último caso, a Oracle oferecia algumas vantagens para as empresas que comprassem o MySQL de forma corporativa, como suporte mais rápido e acesso à alguma documentação específica.
+
+Porém, a licença oferecida de forma aberta ainda mantém a eficiência e características apresentadas antes do MySQL ser comprado por essas empresas gigantes da área de tecnologia.
+
+Lembrando que o MySQL é um banco de dados relacional e compatível com a linguagem SQL. Por isso, vamos aprender nesse treinamento o SQL utilizando o MySQL.
+
+O servidor do MySQL é robusto até certo ponto, já que deriva de características de multiacesso, integridade de dados, efetua o relacionamento entre tabelas, trabalha a concorrência quando vários usuários tentam acessar o mesmo dado na mesma tabela, realiza o controle de transações, entre outros processos. Essa robustez é uma característica importante no que diz respeito ao servidor do MySQL.
+
+Outro aspecto importante é a portabilidade do banco de dados. O MySQL pode ser transacionado entre diversos sistemas. Isso significa que consigo desenvolver o banco de dados MySQL em Windows e posteriormente utilizar no Linux ou Unix, sendo assim, interplataforma.
+
+Ademais, o banco MySQL provém várias APIs que permitem acessar os dados do MySQL usando .Net, Java, Python, PHP, JavaScript e JQuery, por exemplo. Isto é, as linguagens de programação que são mais usadas no mercado possuem APIs nativas para acesso ao MySQL.
+
+Outro atributo importante é o multithreads. O MySQL usa uma programação de threads utilizando diretamente o Kernel do sistema operacional, permitindo aumentar a velocidade de transações, além de facilitar a integração da ferramenta com hardwares, possibilitando a escalabilidade da performance. Isto quer dizer que, caso tenha um MySQL usando um servidor com determinado número de CPUs, é possível acrescentar mais CPUs que o banco de dados se adapta usando o máximo do hardware disponível.
+
+O banco de dados MySQL atua com diversas formas de armazenamento que se adaptam às características das suas necessidades. Por exemplo, algumas formas priorizam a velocidade, enquanto outras o alto volume de armazenamento, tudo dependendo do objetivo pelo qual você utiliza o MySQL. Discutiremos mais sobre isso em treinamentos futuros, quando abordarmos a parte de administração.
+
+A velocidade é outro aspecto fundamental. O MySQL é considerado um dos bancos mais rápidos do mercado, sobretudo quando são utilizadas funcionalidades ligadas à internet. Como exemplo, podemos citar sites de e-commerce e de aplicações de internet, já que as nuvens da Amazon, do Google e da Microsoft (Azure) disponibilizam instâncias de MySQL com uma alta escalabilidade.
+
+Já sobre segurança, o banco de dados MySQL possui internamente diversos mecanismos de segurança, o que o torna bastante seguro para o mercado. Além disso, permite a segregação dos dados por usuários de acesso, isto é, a pessoa possui acesso somente ao que lhe for permitido.
+
+O MySQL também permite o armazenamento de uma quantidade enorme de dados, tornando a sua capacidade alta, a depender das formas de armazenamento. Se for escolhida uma forma que prioriza o volume de dados, há um limite hoje de até 65 mil terabytes de dados armazenados. Claro, recuperar e manipular esse volume de informação pode ser um pouco difícil e depender de muito hardware. A maioria das aplicações corporativas não precisam desse tamanho todo de armazenamento para trabalharem.
+
+Já referente à aplicabilidade, o MySQL não se aplica somente a utilidades de internet - apesar de ser preferido por desenvolvedores web -, mas também aplicações de desktop ou corporativas, essas chamadas de On Premises, nas quais o banco de dados é instalado no próprio servidor da empresa. Esses bancos possuem o que chamamos ODBCs (Open Database Connectivity, comum em bancos baseados em Windows) ou JDBCs (Java Database Connectivity, comum em bancos baseados em Java), que permitem realizar acessos rápidos ao banco de dados MySQL em aplicações desktop.
+
+Finalmente, falaremos um pouco sobre o log. No MySQL há um forte gerenciamento de log, que registra tudo o que fazemos no banco. Isso é um ponto interessante quando é necessário realizar uma recuperação de dados ou se for preciso fazer o que é chamado réplica de servidores, técnica bastante usada quando temos um servidor chamado master e outro slave, existindo uma sincronização de dados entre eles.
+
+Por esse motivo, é um dos bancos de dados mais usados em nuvem, já que esse tipo de banco possui diversas replicações em diferentes lugares do planeta para que, caso um CPD (Centro de Processamento de Dados) caia, outro continue operando e a aplicação siga tendo alta disponibilidade de acesso.
